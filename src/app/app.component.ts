@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-const defaultLang = 'en'
+const defaultLang = 'en';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: '<router-outlet></router-outlet>',
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
@@ -13,6 +13,6 @@ export class AppComponent {
 
   constructor(translate: TranslateService) {
     translate.setDefaultLang(defaultLang);
-    translate.use(defaultLang)
+    translate.use(defaultLang);
   }
 }
